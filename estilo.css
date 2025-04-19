@@ -1,0 +1,138 @@
+/* Reset básico e estilos do corpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: #932020;
+    color: white;
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* Container para Input e Botão Adicionar */
+.input-area {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    padding: 5px 5px 5px 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Campo de Input da Tarefa */
+#tarefa {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+#tarefa::placeholder {
+    color: #aaa;
+}
+
+/* Botão Adicionar (Ícone) */
+#btn {
+    background: none;
+    border: none;
+    color: #8B0000;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.2s ease;
+}
+
+#btn:hover {
+    color: #610000;
+}
+
+/* Lista de Tarefas */
+#lista {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Itens da Lista (Tarefas Individuais) */
+#lista li {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+#lista li:last-child {
+    border-bottom: none;
+}
+
+#lista li:hover {
+    background-color: #f9f9f9;
+}
+
+/* Ícone de Check */
+#lista li .check {
+    color: #555;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#lista li .check:hover {
+    color: #28a745;
+}
+
+/* Texto da Tarefa */
+#lista li span {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Ícone de Lixeira (Remover) */
+#lista li .close {
+    color: #dc3545;
+    margin-left: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#lista li .close:hover {
+    color: #a0212e;
+}
+
+/* Estilo para tarefa completada */
+#lista li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#lista li.completed .check {
+    color: #28a745;
+}
